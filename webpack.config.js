@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -17,7 +17,7 @@ module.exports = {
       template: './src/index.html',
     }),
 
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -47,7 +47,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(js|jsx)$/,
