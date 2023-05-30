@@ -1,21 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins&display=swap');
 
 body {
-
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 ul {
-    display: flex;
-    list-style: none;
+  display: flex;
+  list-style: none;
 }
 
 li {
-    padding: 0 1em;
+  padding: 0 1em;
+}
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid;
 }
