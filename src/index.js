@@ -1,5 +1,6 @@
 import './index.css';
 import getMeals from './modules/getMeals.js';
+import openPopup from './modules/popUp.js';
 
 const mealsSection = document.querySelector('.meals-section');
 const parser = new DOMParser();
@@ -23,10 +24,17 @@ const loadInitialData = async () => {
             <button type="button" class="reservations-btn">Reservations</button>
           </div>
         </div>`;
-
-    const stringElement = parser.parseFromString(string, 'text/html').body.firstChild;
+    const stringElement = parser.parseFromString(string, 'text/html').body
+      .firstChild;
     mealsSection.append(stringElement);
+
+    // Get the comment button element
+    const commentBtn = stringElement.querySelector('.comment-btn');
+
+    // Add event listener to the comment button
+    commentBtn.addEventListener('click', () => {
+      openPopup(data);
+    });
   });
 };
-
 loadInitialData();

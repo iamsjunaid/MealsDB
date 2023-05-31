@@ -25,9 +25,47 @@ li {
   gap: 10px;
 }
 
+.image-container {
+  width: 100%;
+}
+
 .meal-img {
   width: 100%;
   object-fit: cover;
+}
+
+.popup {
+  position: fixed;
+  width: auto;
+  height: fit-content;
+  top: 2px;
+  left: 30%;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+.popUp_image {
+  width: 55%;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.popupInnerContainer {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  z-index: -1;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 footer {
