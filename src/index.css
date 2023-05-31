@@ -25,6 +25,11 @@ li {
   gap: 10px;
 }
 
+.meal-desc {
+  display: flex;
+  justify-content: space-between;
+}
+
 .image-container {
   width: 100%;
 }
@@ -42,6 +47,11 @@ li {
   left: 30%;
   padding: 2rem;
   border-radius: 1rem;
+}
+
+.popupContent {
+  width: 80%;
+  margin: auto;
 }
 
 .popUp_image {

@@ -3,6 +3,7 @@ const openPopup = (data) => {
   const image = data.strMealThumb;
 
   const popupContent = document.createElement('div');
+  popupContent.className = 'popupContent';
   const overlay = document.createElement('div');
   const popupInnerContainer = document.createElement('div');
   popupInnerContainer.className = 'popupInnerContainer';
