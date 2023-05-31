@@ -8,13 +8,13 @@ const postLike = async (itemId) => {
         'Content-Type': 'application/json',
       },
     });
-    const responseJSON = await response.text();
+    const responseJSON = await response.json();
     return responseJSON;
   };
   
   const getLikes = async () => {
     const response = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/tN0rUHEjucNdKTNwHcwx/likes');
-    const responseJSON = await response.text();
+    const responseJSON = await response.json();
     return responseJSON;
   };
   

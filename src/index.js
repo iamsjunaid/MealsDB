@@ -1,11 +1,13 @@
 import './index.css';
 import getMeals from './modules/getMeals.js';
 import openPopup from './modules/popUp.js';
+import { getLikes } from './modules/getLikes.js';
 
 const mealsSection = document.querySelector('.meals-section');
 const parser = new DOMParser();
 
 let mealsList = [];
+const likesArray = getLikes();
 
 const loadInitialData = async () => {
   mealsList = await getMeals();
@@ -38,3 +40,13 @@ const loadInitialData = async () => {
   });
 };
 loadInitialData();
+
+mealsList.forEach((meal) => {
+  const tempLikesArray = likesArray.filter((like) => like.item_id === meal.idMeal);
+  if (tempLikesArray.length === 0) {
+    likesArray.push({
+      likes: 0,
+      item_id: meal.mealId,
+    });
+  }
+});
