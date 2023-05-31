@@ -8,7 +8,7 @@ const reservationsPopUp = (itemDetails) => {
       <h2>${itemDetails.strMeal}</h2>
       <img class="popUp_image" src=${itemDetails.strMealThumb} alt="meal image">
       <p><strong>Description</strong> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione!</p>
-      <p><strong>User Comments</strong> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione!</p>
+      <p><strong>Reservations</strong> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, ratione!</p>
       <button class="close-btn">Close</button>
     `;
 
