@@ -1,3 +1,5 @@
+let reservationsCounter = 0;
+
 const reservationsPopUp = (itemDetails) => {
   const modal = document.createElement('div');
   modal.classList.add('modal');
@@ -14,6 +16,7 @@ const reservationsPopUp = (itemDetails) => {
         <li>Date: <span id="reservationDate">Friday, June 3, 2023</span></li>
         <li>Time: <span id="reservationTime">7:00 PM</span></li>
         <li>Number of Guests: <span id="reservationGuests">4</span></li>
+        <li>Reservation Count: <span id="reservationsCounter">${reservationsCounter}</span></li> <!-- Add counter element -->
       <button class="close-btn">Close</button>
     `;
 
@@ -24,14 +27,17 @@ const reservationsPopUp = (itemDetails) => {
     const reservationDate = document.getElementById('reservationDate');
     const reservationTime = document.getElementById('reservationTime');
     const reservationGuests = document.getElementById('reservationGuests');
+    const counterElement = document.getElementById('reservationsCounter'); // Get the counter element
 
-    // Get current date and time
     const currentDate = new Date();
     const currentTime = currentDate.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
 
     reservationDate.textContent = currentDate.toDateString();
     reservationTime.textContent = currentTime;
     reservationGuests.textContent = Math.floor(Math.random() * 10) + 1;
+
+    reservationsCounter += 1;
+    counterElement.textContent = reservationsCounter;
   };
 
   const closeButton = content.querySelector('.close-btn');
