@@ -4,7 +4,7 @@ import getMeals from './modules/getMeals.js';
 import openPopup from './modules/popUp.js';
 import reservationsPopUp from './modules/reservationsPopUp.js';
 import addNewReservationsPopUp from './modules/addReservation.js';
-import { getLikes } from './modules/getLikes.js';
+import { getLikes, postLike } from './modules/getLikes.js';
 
 const mealsSection = document.querySelector('.meals-section');
 const parser = new DOMParser();
@@ -43,6 +43,16 @@ const init = async () => {
     const stringElement = parser.parseFromString(string, 'text/html').body
       .firstChild;
     mealsSection.append(stringElement);
+
+    const likeBtn = stringElement.querySelector('.like-btn');
+    const likeEl = stringElement.querySelector('.likes');
+
+    likeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      postLike(mealWithLike.idMeal);
+      mealWithLike.likes += 1;
+      likeEl.innerHTML = `${mealWithLike.likes}`;
+    });
 
     const newReservationsBtn = stringElement.querySelector('.new-reservations-btn');
     newReservationsBtn.addEventListener('click', () => {
