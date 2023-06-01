@@ -43,7 +43,7 @@ li {
   position: fixed;
   width: auto;
   height: fit-content;
-  top: 2px;
+  top: -25px;
   left: 30%;
   padding: 2rem;
   border-radius: 1rem;
