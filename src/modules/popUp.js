@@ -1,6 +1,9 @@
+import { getComments } from './comments.js';
+
 const openPopup = (data) => {
   const title = data.strMeal;
   const image = data.strMealThumb;
+  const id = data.idMeal;
 
   const popupContent = document.createElement('div');
   popupContent.className = 'popupContent';
@@ -21,8 +24,8 @@ const openPopup = (data) => {
       </div>
 
       <div class="comments-container">
-      <div class="counter2"></div>
           <h3 class="user-comments">Users comments</h3>
+          <p class="commentParag"></p>
       </div>
             `;
 
@@ -31,6 +34,14 @@ const openPopup = (data) => {
   popup.appendChild(overlay);
   popup.appendChild(popupInnerContainer);
   popup.appendChild(popupContent);
+  getComments(id)
+    .then((res) => {
+      const p1 = document.querySelector('.commentParag');
+      res.map(
+        (item) => (p1.innerHTML = `${item.creation_date} ${item.username} ${item.comment}<br>`), // eslint-disable-line no-return-assign,
+      );
+    })
+    .catch((err) => err);
 
   const closepopup = document.querySelector('.closepopup');
   closepopup.addEventListener('click', () => {
