@@ -4,23 +4,36 @@ import getMeals from './modules/getMeals.js';
 import openPopup from './modules/popUp.js';
 import reservationsPopUp from './modules/reservationsPopUp.js';
 import addNewReservationsPopUp from './modules/addReservation.js';
+import { getLikes } from './modules/getLikes.js';
 
 const mealsSection = document.querySelector('.meals-section');
 const parser = new DOMParser();
 
-let mealsList = [];
+const init = async () => {
+  const likesArray = await getLikes();
+  const mealsArray = await getMeals();
 
-const loadInitialData = async () => {
-  mealsList = await getMeals();
-  mealsList.meals.forEach((data) => {
+  const combinedArray = mealsArray.meals.map((meal) => {
+    const likeForThisMeal = likesArray.filter((likeObj) => likeObj.item_id === meal.idMeal);
+    return {
+      strMealThumb: meal.strMealThumb,
+      strMeal: meal.strMeal,
+      idMeal: meal.idMeal,
+      likes: likeForThisMeal.length === 0 ? 0 : likeForThisMeal[0].likes,
+    };
+  });
+
+  combinedArray.forEach((mealWithLike) => {
     const string = `
       <div class="meal-container">
-        <img src="${data.strMealThumb}" alt="meal" class="meal-img">
+      <img src="${mealWithLike.strMealThumb}" alt="meal" class="meal-img">
         
         <div class="meal-details">
           <div class="meal-desc">
-            <p class="title">${data.strMeal}</p>  
-            <p class="like" id="${data.idMeal}"><i class="fa-solid fa-heart"></i></p>
+          <p class="title">${mealWithLike.strMeal}</p>
+          <div class="like" id="${mealWithLike.idMeal}">
+            <p class='likes'>${mealWithLike.likes}</p>
+            <i class="fa-solid fa-heart like-btn"></i>
           </div>
           <button type="button" class="comment-btn">Comments</button>
           <button type="button" class="reservations-btn">Reservations</button>
@@ -33,21 +46,21 @@ const loadInitialData = async () => {
 
     const newReservationsBtn = stringElement.querySelector('.new-reservations-btn');
     newReservationsBtn.addEventListener('click', () => {
-      addNewReservationsPopUp(data);
+      addNewReservationsPopUp(mealWithLike);
     });
 
     const reservationsBtn = stringElement.querySelector('.reservations-btn');
     reservationsBtn.addEventListener('click', () => {
-      reservationsPopUp(data);
+      reservationsPopUp(mealWithLike);
     });
 
     // Get the comment button element
     const commentBtn = stringElement.querySelector('.comment-btn');
     // Add event listener to the comment button
     commentBtn.addEventListener('click', () => {
-      openPopup(data);
+      openPopup(mealWithLike);
     });
   });
 };
 
-loadInitialData();
+init();
