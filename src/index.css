@@ -113,7 +113,7 @@ footer {
   cursor: pointer;
 }
 
- 
+
 .reservation-data div {
   margin-bottom: 10px;
 }
@@ -123,7 +123,6 @@ footer {
   height: auto;
   margin-top: 10px;
 }
-
 
 .new-modal {
   position: fixed;
@@ -189,4 +188,3 @@ footer {
 .close-btn:hover {
   background-color: #45a049;
 }
-

@@ -19,7 +19,7 @@ const addNewReservationsPopUp = () => {
           <label for="reservation-guests">Number of Guests:</label>
           <input type="number" id="reservation-guests" required>
   
-          <button type="submit">Submit</button>
+          <button type="submit">Reserve</button>
           <button type="button" class="reservation-close-btn">Close</button>
         </form>
       `;
