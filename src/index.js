@@ -3,6 +3,7 @@ import './index.css';
 import getMeals from './modules/getMeals.js';
 import openPopup from './modules/popUp.js';
 import reservationsPopUp from './modules/reservationsPopUp.js';
+import addNewReservationsPopUp from './modules/addReservation.js';
 
 const mealsSection = document.querySelector('.meals-section');
 const parser = new DOMParser();
@@ -23,11 +24,17 @@ const loadInitialData = async () => {
           </div>
           <button type="button" class="comment-btn">Comments</button>
           <button type="button" class="reservations-btn">Reservations</button>
+          <button type="button" class="new-reservations-btn">Add new reservation</button>
         </div>
       </div>`;
     const stringElement = parser.parseFromString(string, 'text/html').body
       .firstChild;
     mealsSection.append(stringElement);
+
+    const newReservationsBtn = stringElement.querySelector('.new-reservations-btn');
+    newReservationsBtn.addEventListener('click', () => {
+      addNewReservationsPopUp(data);
+    });
 
     const reservationsBtn = stringElement.querySelector('.reservations-btn');
     reservationsBtn.addEventListener('click', () => {
