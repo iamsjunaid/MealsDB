@@ -2,12 +2,12 @@ const openPopup = (data) => {
   const title = data.strMeal;
   const image = data.strMealThumb;
 
-  const popupContent = document.createElement("div");
-  popupContent.className = "popupContent";
-  const overlay = document.createElement("div");
-  const popupInnerContainer = document.createElement("div");
-  popupInnerContainer.className = "popupInnerContainer";
-  overlay.className = "popup-overlay";
+  const popupContent = document.createElement('div');
+  popupContent.className = 'popupContent';
+  const overlay = document.createElement('div');
+  const popupInnerContainer = document.createElement('div');
+  popupInnerContainer.className = 'popupInnerContainer';
+  overlay.className = 'popup-overlay';
 
   popupContent.innerHTML = `
       <p class="closepopup">X</div>
@@ -26,14 +26,14 @@ const openPopup = (data) => {
       </div>
             `;
 
-  const popup = document.querySelector(".popup");
-  popup.className = "popup";
+  const popup = document.querySelector('.popup');
+  popup.className = 'popup';
   popup.appendChild(overlay);
   popup.appendChild(popupInnerContainer);
   popup.appendChild(popupContent);
 
-  const closepopup = document.querySelector(".closepopup");
-  closepopup.addEventListener("click", () => {
+  const closepopup = document.querySelector('.closepopup');
+  closepopup.addEventListener('click', () => {
     popup.removeChild(overlay);
     popup.removeChild(popupInnerContainer);
     popup.removeChild(popupContent);
