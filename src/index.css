@@ -78,6 +78,15 @@ li {
   padding-right: 2rem;
 }
 
+.nameinputfield {
+  padding: 5px;
+  margin-bottom: 1rem;
+}
+
+.messageinputfield {
+  padding: 5px;
+}
+
 footer {
   padding: 2rem;
   text-align: center;

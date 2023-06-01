@@ -1,4 +1,4 @@
-import { getComments } from './comments.js';
+import { getComments, postComments } from './comments.js';
 
 const openPopup = (data) => {
   const title = data.strMeal;
@@ -27,6 +27,12 @@ const openPopup = (data) => {
           <h3 class="user-comments">Users comments</h3>
           <p class="commentParag"></p>
       </div>
+      <form>
+    <input class="nameinputfield" type="text" id="username" name="user_name" placeholder="Your name" required minlength="1" maxlength="30" /></br>
+    <textarea class="messageinputfield" id="msg" name="user_message" placeholder="Your comment" required minlength="1" maxlength="500"></textarea></br>
+    <button class="submit" type="button">Submit</button>
+    <span class="notifier"></span>
+      </form>
             `;
 
   const popup = document.querySelector('.popup');
@@ -34,6 +40,21 @@ const openPopup = (data) => {
   popup.appendChild(overlay);
   popup.appendChild(popupInnerContainer);
   popup.appendChild(popupContent);
+  const form = document.querySelector('.submit');
+  const usersName = document.querySelector('.nameinputfield');
+  const usersComment = document.querySelector('.messageinputfield');
+
+  form.addEventListener('click', (e) => {
+    e.preventDefault();
+    const username = usersName.value;
+    const usercomment = usersComment.value;
+    postComments(id, username, usercomment)
+      .then((res) => res)
+      .catch((err) => err);
+    usersName.value = '';
+    usersComment.value = '';
+  });
+
   getComments(id)
     .then((res) => {
       const p1 = document.querySelector('.commentParag');
