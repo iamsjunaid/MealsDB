@@ -13,7 +13,7 @@ const postComments = async (itemId, username, comment) => {
       },
     },
   );
-  const responseJSON = await response.json();
+  const responseJSON = await response.text();
   return responseJSON;
 };
 

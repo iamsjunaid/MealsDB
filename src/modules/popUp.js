@@ -24,7 +24,7 @@ const openPopup = (data) => {
       </div>
 
       <div class="comments-container">
-          <h3 class="user-comments">Users comments</h3>
+          <h3 class="user-comments">Users comments (<span class="counter"></span>)</h3>
           <p class="commentParag"></p>
       </div>
       <form>
@@ -59,6 +59,8 @@ const openPopup = (data) => {
   getComments(id)
     .then((res) => {
       const p1 = document.querySelector('.commentParag');
+      const counter = document.querySelector('.counter');
+      counter.innerHTML = `${res.length || ''}`;
       res.map(
         (item) => (p1.innerHTML = `${item.creation_date} ${item.username} ${item.comment}<br>`), // eslint-disable-line no-return-assign,
       );
