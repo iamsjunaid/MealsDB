@@ -181,18 +181,19 @@ footer {
   cursor: pointer;
 }
 
-.new-popup-content form .reservation-close-btn {
-  background-color: #ccc;
+.new-popup-content form,
+.reservation-close-btn,
+.new-reservations-btn {
   color: #000;
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  margin-left: 8px;
 }
 
 .new-popup-content form button[type="submit"]:hover,
 .new-popup-content form .reservation-close-btn:hover,
-.close-btn:hover {
+.close-btn:hover,
+.new-reservations-btn:hover {
   background-color: #45a049;
 }
