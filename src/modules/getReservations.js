@@ -1,4 +1,4 @@
-const postReservation = async (itemId, username, startDate, endDate) => {
+const postReservation = async (itemId, username, date_start, date_end) => {
   const response = await fetch(
     'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/tN0rUHEjucNdKTNwHcwx/reservations',
     {
@@ -6,8 +6,8 @@ const postReservation = async (itemId, username, startDate, endDate) => {
       body: JSON.stringify({
         item_id: itemId,
         username,
-        startDate,
-        endDate,
+        date_start,
+        date_end,
       }),
       headers: {
         'Content-Type': 'application/json',
