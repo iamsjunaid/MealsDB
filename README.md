@@ -53,9 +53,15 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🎥 Walkthrough video <a name="live-demo"></a>
+
+- [Video Walkthrough](https://drive.google.com/file/d/1Ov4gX_gGTdiXow_t_9anMLQ0lHgfTBQ9/view?usp=sharing)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://iamsjunaid.github.io/js-capstone-2/dist/)
+- [Live Demo Link](https://iamsjunaid.github.io/js-capstone-2/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING STARTED -->
