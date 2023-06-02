@@ -26,8 +26,8 @@ const addNewReservationsPopUp = () => {
       <label for="end-date">End Date:</label>
       <input type="date" id="end-date" required>
 
-      <button type="submit" class="reserve">Reserve</button>
-      <button type="button" class="reservation-close-btn">Close</button>
+      <button type="button" class="reservation-close-btn reservation-popup-btn">Close</button>
+      <button type="submit" class="reserve reservation-popup-btn">Reserve</button>
     </form>
   `;
 

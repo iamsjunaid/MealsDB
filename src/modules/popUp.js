@@ -13,7 +13,7 @@ const openPopup = (data) => {
   overlay.className = 'popup-overlay';
 
   popupContent.innerHTML = `
-      <p class="closepopup">X</div>
+      
 
       <div class="image-container">
           <img class="popUp_image" src=${image} alt="">
@@ -30,6 +30,7 @@ const openPopup = (data) => {
       <form>
     <input class="nameinputfield" type="text" id="username" name="user_name" placeholder="Your name" required minlength="1" maxlength="30" /></br>
     <textarea class="messageinputfield" id="msg" name="user_message" placeholder="Your comment" required minlength="1" maxlength="500"></textarea></br>
+    <button type="button"  class="closepopup">Close</button>
     <button class="submit" type="button">Submit</button>
     <span class="notifier"></span>
       </form>

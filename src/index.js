@@ -40,9 +40,10 @@ const init = async () => {
             <p class='likes'>${mealWithLike.likes}</p>
             <i class="fa-solid fa-heart like-btn"></i>
           </div>
-          <button type="button" class="comment-btn">Comments</button>
-          <button type="button" class="reservations-btn">Reservations</button>
-          
+          <div class="btn-container">
+          <button type="button" class="comment-btn homepage-btn">Comments</button>
+          <button type="button" class="reservations-btn homepage-btn">Reservations</button>
+          </div>
         </div>
       </div>`;
     const stringElement = parser.parseFromString(string, 'text/html').body
