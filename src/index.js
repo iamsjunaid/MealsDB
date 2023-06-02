@@ -5,6 +5,7 @@ import openPopup from './modules/popUp.js';
 import reservationsPopUp from './modules/reservationsPopUp.js';
 import { getLikes, postLike } from './modules/getLikes.js';
 import { getReservations, postReservation } from './modules/getReservations.js';
+import ItemsCounter from './modules/counters/itemsCounter.js';
 
 window.addEventListener('load', async () => {
   postReservation();
@@ -70,6 +71,10 @@ const init = async () => {
       openPopup(mealWithLike);
     });
   });
+
+  const totalItems = ItemsCounter();
+  const itemsCounterEl = document.querySelector('.items-counter');
+  itemsCounterEl.innerHTML = `(${totalItems})`;
 };
 
 init();
