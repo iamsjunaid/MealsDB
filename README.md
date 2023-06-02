@@ -7,6 +7,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Live Demo](#live-demo)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -24,10 +25,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 To-do-list <a name="about-project"></a>
+# 📖 js-capstone-2 <a name="about-project"></a>
 
-**To-do-list** is an Application that lists things to achieve for a given time
-
+**js-capstone-2** is an application that uses an external API [mealsDB](https://www.themealdb.com/api.php) to fetch and store the data from. The project contains meals that a user can like, comment and reserve. 
+ 
 ## 🛠 Built With <a name="built-with"></a>
 > a combination of HTML CSS and JavaScript
 
@@ -39,8 +40,6 @@
 > linters: lighthouse, webhint, stylelint, eslint
 > JavaScript
 > with the help of VS Ccode
-
-
 
 <!-- Features -->
 
@@ -54,7 +53,11 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## 🚀 Live Demo <a name="live-demo"></a>
 
+- [Live Demo Link](https://iamsjunaid.github.io/js-capstone-2/dist/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -68,7 +71,7 @@ In order to run this project you need:
 Example command:
 
 ```sh
- use any web browser
+ npm start
 ```
 
 ### Setup
@@ -116,7 +119,7 @@ To run tests, run the following command:
 Example command:
 
 ```sh
-  no tests required
+  npm tests
 ```
 
 ### Deployment
@@ -127,7 +130,7 @@ You can deploy this project using:
 Example:
 
 ```sh
-    no deployment
+    gh-pages
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -136,12 +139,23 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
+👤 **Junaid**
 
-👤 **Author1**
+- GitHub: [@iamsjunaid](https://github.com/iamsjunaid)
+- Twitter: [@junaidahmedsd](https://twitter.com/junaidahmedsd)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/junaid-syed-058b2779)
+
+👤 **Emmanuel**
 
 - GitHub: [@uno36](https://github.com/uno36)
 - Twitter: [@tofauemmanuel](https://twitter.com/tofauemmanuel)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/emmanuel-tofa-673b2516a/)
+
+👤 **Peter**
+
+- GitHub: [@Peter-Dumbari](https://github.com/Peter-Dumbari)
+- Twitter: [@Lazkkidy](https://twitter.com/Lazkkidy)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/peter-kinz-7aa419235/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>..
 
@@ -162,7 +176,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/iamsjunaid/js-capstone-2/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -184,21 +198,8 @@ we would like to thank Microverse for their continued support
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
-
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-
-
-- **What is the purpose of ato-do-list**
-
-serves the purpose of cataloging and organizing a vast collection of information related to meals. It acts as a centralized repository of culinary data, containing details such as recipes, ingredients, nutritional values, cooking methods, and serving suggestions. The database enables individuals, businesses, and organizations to access comprehensive meal-related information conveniently. It can be utilized by recipe websites, meal planning apps, nutritionists, and culinary researchers to provide users with a wealth of knowledge, promote healthier eating habits, facilitate meal customization, and enhance the overall culinary experience. The MealsDB serves as a valuable resource for exploring, creating, and sharing a diverse range of meals for various dietary preferences and nutritional needs.
-  
-<p align="right">(<a href="#readme-top">back to top</a>)</p>..
-
-
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](LICENSE) licensed.
+This project is [MIT](https://github.com/iamsjunaid/js-capstone-2/blob/dev/LICENSE) licensed.
