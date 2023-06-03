@@ -81,6 +81,19 @@ const openReservationPopup = (data) => {
       console.log(err); // eslint-disable-line no-console
     }
   });
+
+  getReservations(id).then((res) => {
+    const list = JSON.parse(res);
+    const p1 = document.querySelector('.commentParag');
+    const reservationsContainer = document.createElement('div');
+    reservationsContainer.className = 'reservations-container';
+    list.forEach((element) => {
+      reservationsContainer.innerHTML = `<ul class="ul-reservations-container"><li>${element.username}</li><li>${element.date_start}</li><li>${element.date_end}</li></ul>`;
+    });
+    p1.appendChild(reservationsContainer);
+    console.log(res); // eslint-disable-line no-console
+  });
+
   const closepopup = document.querySelector('.closepopup');
   closepopup.addEventListener('click', () => {
     popup.removeChild(overlay);
