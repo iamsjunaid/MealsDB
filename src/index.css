@@ -255,6 +255,22 @@ footer {
   cursor: pointer;
 }
 
+.commentParag{
+  font-size: smaller;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 120px;
+  margin-top: 0;
+  width: 60%;
+  color: darkgrey;
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+.user-comments{ 
+  margin: 0;
+}
 .homepage-btn:hover {
   background-color: #fff;
   color: #3f5a68;

@@ -1,16 +1,16 @@
-import { getComments, postComments } from './comments.js';
+import { getComments, postComments } from "./comments.js";
 
 const openPopup = (data) => {
   const title = data.strMeal;
   const image = data.strMealThumb;
   const id = data.idMeal;
 
-  const popupContent = document.createElement('div');
-  popupContent.className = 'popupContent';
-  const overlay = document.createElement('div');
-  const popupInnerContainer = document.createElement('div');
-  popupInnerContainer.className = 'popupInnerContainer';
-  overlay.className = 'popup-overlay';
+  const popupContent = document.createElement("div");
+  popupContent.className = "popupContent";
+  const overlay = document.createElement("div");
+  const popupInnerContainer = document.createElement("div");
+  popupInnerContainer.className = "popupInnerContainer";
+  overlay.className = "popup-overlay";
 
   popupContent.innerHTML = `
       
@@ -36,39 +36,56 @@ const openPopup = (data) => {
       </form>
             `;
 
-  const popup = document.querySelector('.popup');
-  popup.className = 'popup';
+  const popup = document.querySelector(".popup");
+  popup.className = "popup";
   popup.appendChild(overlay);
   popup.appendChild(popupInnerContainer);
   popup.appendChild(popupContent);
-  const form = document.querySelector('.submit');
-  const usersName = document.querySelector('.nameinputfield');
-  const usersComment = document.querySelector('.messageinputfield');
+  const form = document.querySelector(".submit");
+  const usersName = document.querySelector(".nameinputfield");
+  const usersComment = document.querySelector(".messageinputfield");
 
-  form.addEventListener('click', (e) => {
+  form.addEventListener("click", (e) => {
     e.preventDefault();
     const username = usersName.value;
     const usercomment = usersComment.value;
     postComments(id, username, usercomment)
-      .then((res) => res)
+      .then((res) => {
+        if (res === "Created") {
+          getComments(id)
+            .then((res) => {
+              let p1 = document.querySelector(".commentParag");
+              const counter = document.querySelector(".counter");
+              counter.innerHTML = `${res.length || ""}`;
+              let html = "";
+              res.forEach((item) => {
+                html += `${item.creation_date} ${item.username} ${item.comment}<br>`;
+              });
+              p1.innerHTML = html;
+            })
+            .catch((err) => err);
+        }
+      })
       .catch((err) => err);
-    usersName.value = '';
-    usersComment.value = '';
+    usersName.value = "";
+    usersComment.value = "";
   });
 
   getComments(id)
     .then((res) => {
-      const p1 = document.querySelector('.commentParag');
-      const counter = document.querySelector('.counter');
-      counter.innerHTML = `${res.length || ''}`;
-      res.map(
-        (item) => (p1.innerHTML = `${item.creation_date} ${item.username} ${item.comment}<br>`), // eslint-disable-line no-return-assign,
-      );
+      let p1 = document.querySelector(".commentParag");
+      const counter = document.querySelector(".counter");
+      counter.innerHTML = `${res.length || ""}`;
+      let html = "";
+      res.forEach((item) => {
+        html += `${item.creation_date} ${item.username} ${item.comment}<br>`;
+      });
+      p1.innerHTML = html;
     })
     .catch((err) => err);
 
-  const closepopup = document.querySelector('.closepopup');
-  closepopup.addEventListener('click', () => {
+  const closepopup = document.querySelector(".closepopup");
+  closepopup.addEventListener("click", () => {
     popup.removeChild(overlay);
     popup.removeChild(popupInnerContainer);
     popup.removeChild(popupContent);
