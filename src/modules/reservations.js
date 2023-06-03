@@ -59,7 +59,6 @@ const openReservationPopup = (data) => {
     try {
       await postReservation(id, username, startdate, dateend);
 
-      // Display the new reservation immediately
       const res = await getReservations(id);
 
       const p1 = document.querySelector('.commentParag');
