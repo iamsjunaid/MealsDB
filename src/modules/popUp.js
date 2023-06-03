@@ -28,8 +28,10 @@ const openPopup = (data) => {
           <p class="commentParag"></p>
       </div>
       <form>
+      <div class="input-fields">
     <input class="nameinputfield" type="text" id="username" name="user_name" placeholder="Your name" required minlength="1" maxlength="30" /></br>
     <textarea class="messageinputfield" id="msg" name="user_message" placeholder="Your comment" required minlength="1" maxlength="500"></textarea></br>
+    </div>
     <button type="button"  class="closepopup">Close</button>
     <button class="submit" type="button">Submit</button>
     <span class="notifier"></span>

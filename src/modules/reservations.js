@@ -24,7 +24,7 @@ const openReservationPopup = (data) => {
       </div>
 
       <div class="comments-container">
-          <h3 class="user-comments">Users Reservations (<span class="counter"></span>)</h3>
+          <h3 class="user-comments">Users Reservations (<span class="res-counter"></span>)</h3>
           <p class="commentParag"></p>
       </div>
       <form>
@@ -62,16 +62,20 @@ const openReservationPopup = (data) => {
       const res = await getReservations(id);
 
       const p1 = document.querySelector('.commentParag');
-      const counter = document.querySelector('.counter');
-      counter.innerHTML = `${res.length || ''}`;
+      // const counter = document.querySelector('.counter');
+      // counter.innerHTML = `${res.length || ''}`;
 
       const list = JSON.parse(res);
 
       const reservationsContainer = document.createElement('div');
+      const counter = document.querySelector('.res-counter');
+      counter.innerHTML = `${list.length || ''}`;
       reservationsContainer.className = 'reservations-container';
+      let htmlData = '';
       list.forEach((element) => {
-        reservationsContainer.innerHTML = `<ul class="ul-reservations-container"><li>${element.username}</li><li>${element.date_start}</li><li>${element.date_end}</li></ul>`;
+        htmlData += `<ul class="ul-reservations-container"><li>${element.username}</li><li>${element.date_start}</li><li>${element.date_end}</li></ul>`;
       });
+      reservationsContainer.innerHTML = htmlData;
       p1.appendChild(reservationsContainer);
 
       usersName.value = '';
@@ -86,12 +90,15 @@ const openReservationPopup = (data) => {
     const list = JSON.parse(res);
     const p1 = document.querySelector('.commentParag');
     const reservationsContainer = document.createElement('div');
+    const counter = document.querySelector('.res-counter');
+    counter.innerHTML = `${list.length || ''}`;
     reservationsContainer.className = 'reservations-container';
+    let htmlData = '';
     list.forEach((element) => {
-      reservationsContainer.innerHTML = `<ul class="ul-reservations-container"><li>${element.username}</li><li>${element.date_start}</li><li>${element.date_end}</li></ul>`;
+      htmlData += `<ul class="ul-reservations-container"><li>${element.username}</li><li>${element.date_start}</li><li>${element.date_end}</li></ul>`;
     });
+    reservationsContainer.innerHTML = htmlData;
     p1.appendChild(reservationsContainer);
-    console.log(res); // eslint-disable-line no-console
   });
 
   const closepopup = document.querySelector('.closepopup');

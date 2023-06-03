@@ -57,6 +57,7 @@ h1 {
 
 .image-container {
   width: 100%;
+  text-align: center;
 }
 
 .meal-img {
@@ -255,22 +256,23 @@ footer {
   cursor: pointer;
 }
 
-.commentParag{
+.commentParag {
   font-size: smaller;
   overflow: hidden;
   overflow-y: scroll;
   height: 120px;
   margin-top: 0;
-  width: 60%;
+
+  /* width: 60%; */
   color: darkgrey;
   font-style: normal;
   font-weight: bold;
 }
 
-
-.user-comments{ 
+.user-comments {
   margin: 0;
 }
+
 .homepage-btn:hover {
   background-color: #fff;
   color: #3f5a68;
@@ -290,7 +292,7 @@ footer {
 .input-fields {
   display: flex;
   flex-direction: column;
-  width: max-content;
+  width: 100%;
   gap: 0.2em;
 }
 
@@ -302,4 +304,10 @@ footer {
   /* flex-direction: column; */
   padding: 0 0.3em;
   font-size: 12px;
+}
+
+.ul-reservations-container {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100%;
 }
