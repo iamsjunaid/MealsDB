@@ -75,10 +75,10 @@ h1 {
 }
 
 .popupContent {
-  width: 80%;
-  margin: auto;
   color: #fff;
-  padding-top: 2em;
+  padding: 1em;
+  background-color: #3f5a68;
+  width: 60%;
 }
 
 .popUp_image {
@@ -97,13 +97,13 @@ h1 {
 
 .popupInnerContainer,
 .popup-content {
-  width: 50%;
+  /* width: 50%;
   height: 100%;
   position: absolute;
   z-index: -1;
   padding-left: 2rem;
   padding-right: 2rem;
-  background-color: #3f5a68 !important;
+  background-color: #3f5a68 !important; */
 }
 
 .nameinputfield {
@@ -269,4 +269,21 @@ footer {
 .title,
 .likes {
   color: #fff;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  gap: 0.2em;
+}
+
+.popup-btn-container {
+  margin-top: 0.3em;
+}
+
+.ul-reservations-container li {
+  /* flex-direction: column; */
+  padding: 0 0.3em;
+  font-size: 12px;
 }

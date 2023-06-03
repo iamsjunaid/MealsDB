@@ -2,7 +2,7 @@
 import './index.css';
 import getMeals from './modules/getMeals.js';
 import openPopup from './modules/popUp.js';
-import reservationsPopUp from './modules/reservationsPopUp.js';
+import openReservationPopup from './modules/reservations.js';
 import { getLikes, postLike } from './modules/getLikes.js';
 import { getReservations, postReservation } from './modules/getReservations.js';
 import ItemsCounter from './modules/counters/itemsCounter.js';
@@ -62,7 +62,8 @@ const init = async () => {
 
     const reservationsBtn = stringElement.querySelector('.reservations-btn');
     reservationsBtn.addEventListener('click', () => {
-      reservationsPopUp(mealWithLike);
+      // reservationsPopUp(mealWithLike);
+      openReservationPopup(mealWithLike);
     });
 
     // Get the comment button element

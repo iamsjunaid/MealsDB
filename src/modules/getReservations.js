@@ -1,20 +1,20 @@
-const postReservation = async (itemId, username, startDate, endDate) => {
+const postReservation = async (itemId, username, dateStart, dateEnd) => {
   const response = await fetch(
     'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/tN0rUHEjucNdKTNwHcwx/reservations',
     {
       method: 'POST',
       body: JSON.stringify({
-        item_idetails: itemId,
+        item_id: itemId,
         username,
-        startDate,
-        endDate,
+        date_start: dateStart,
+        date_end: dateEnd,
       }),
       headers: {
         'Content-Type': 'application/json',
       },
     },
   );
-  const responseJSON = await response.json();
+  const responseJSON = await response.text();
   return responseJSON;
 };
 
@@ -22,7 +22,7 @@ const getReservations = async (itemId) => {
   const response = await fetch(
     `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/tN0rUHEjucNdKTNwHcwx/reservations?item_id=${itemId}`,
   );
-  const responseJSON = await response.json();
+  const responseJSON = await response.text();
   return responseJSON;
 };
 
