@@ -25,9 +25,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 js-capstone-2 <a name="about-project"></a>
+# 📖 MealsDB <a name="about-project"></a>
 
-**js-capstone-2** is an application that uses an external API [mealsDB](https://www.themealdb.com/api.php) to fetch and store the data from. The project contains meals that a user can like, comment and reserve. 
+**MealsDB** is an application that uses an external API [mealsDB](https://www.themealdb.com/api.php) to fetch and store the data from. The project contains meals that a user can like, comment and reserve. 
  
 ## 🛠 Built With <a name="built-with"></a>
 > a combination of HTML CSS and JavaScript
