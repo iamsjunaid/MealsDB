@@ -61,7 +61,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://iamsjunaid.github.io/js-capstone-2/)
+- [Live Demo Link](https://iamsjunaid.github.io/MealsDB/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- GETTING STARTED -->
