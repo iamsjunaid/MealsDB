@@ -125,7 +125,7 @@ To run tests, run the following command:
 Example command:
 
 ```sh
-  npm tests
+  npm test
 ```
 
 ### Deployment
@@ -148,7 +148,6 @@ Example:
 👤 **Junaid**
 
 - GitHub: [@iamsjunaid](https://github.com/iamsjunaid)
-- Twitter: [@junaidahmedsd](https://twitter.com/junaidahmedsd)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/junaid-syed-058b2779)
 
 👤 **Emmanuel**
