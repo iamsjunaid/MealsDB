@@ -77,7 +77,7 @@ In order to run this project you need:
 Example command:
 
 ```sh
- npm start
+ nodeJS --v18.0
 ```
 
 ### Setup
