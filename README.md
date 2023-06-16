@@ -89,7 +89,7 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone (https://github.com/iamsjunaid/js-capstone-2)
+  git clone https://github.com/iamsjunaid/mealsdb.git
 ```
 
 ### Install
@@ -101,7 +101,7 @@ Example command:
 
 ```sh
   cd my-project
-  no installation required
+  npm install
 ```
 
 
@@ -113,7 +113,7 @@ To run the project, execute the following command:
 Example command:
 
 ```sh
-  use text editor vs code or webrowser
+  npm start
 ```
 
 
