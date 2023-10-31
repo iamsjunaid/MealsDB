@@ -53,7 +53,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🎥 Walkthrough video <a name="live-demo"></a>
+## 🎥 Walkthrough Video <a name="live-demo"></a>
 
 - [Video Walkthrough](https://drive.google.com/file/d/1Ov4gX_gGTdiXow_t_9anMLQ0lHgfTBQ9/view?usp=sharing)
 
