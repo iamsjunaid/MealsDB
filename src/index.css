@@ -140,9 +140,6 @@ footer {
   border-radius: 5px;
   max-width: 400px;
   color: #fff;
-  text-align: center;
-  height: 36rem;
-  overflow-y: scroll;
 }
 
 .close-btn {
